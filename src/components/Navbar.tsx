@@ -5,25 +5,23 @@ import { useState } from "react";
 
 const navLinks = [
   { to: "/", label: "Home" },
-  { to: "/about", label: "About" },
   { to: "/route", label: "Route" },
-  { to: "/booking", label: "Contributes" },
-  { to: "/marketplace", label: "Cooperatives list" },
-  { to: "/feedback", label: "Visitor" },
+  { to: "/booking", label: "Booking" },
+  { to: "/marketplace", label: "Marketplace" },
+  { to: "/feedback", label: "Feedback" },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-card border-b border-border">
+    <nav className="sticky top-0 z-50 bg-card/95 backdrop-blur-md border-b border-border shadow-sm">
       <div className="container mx-auto flex justify-between items-center py-3 px-4">
-        <Link to="/" className="flex flex-col">
-          <span className="text-xl font-display italic font-bold text-foreground">New Brighton</span>
-          <span className="text-[10px] text-muted-foreground tracking-wide">Your Gateway to Culture</span>
+        <Link to="/" className="text-xl font-bold text-foreground tracking-tight">
+          New Brighton
         </Link>
 
-        <div className="hidden lg:flex items-center gap-5">
+        <div className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
             <Link
               key={link.to}
@@ -40,7 +38,7 @@ export default function Navbar() {
             <Button variant="hero" size="sm">Book Now</Button>
           </Link>
           <button
-            className="lg:hidden text-foreground"
+            className="md:hidden text-foreground"
             onClick={() => setOpen(!open)}
           >
             {open ? <X size={24} /> : <Menu size={24} />}
@@ -49,7 +47,7 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="lg:hidden border-t border-border bg-card px-4 py-3 space-y-2">
+        <div className="md:hidden border-t border-border bg-card px-4 py-3 space-y-2">
           {navLinks.map((link) => (
             <Link
               key={link.to}

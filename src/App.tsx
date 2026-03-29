@@ -8,6 +8,7 @@ import Home from "@/pages/Home";
 import RoutePage from "@/pages/RoutePage";
 import RouteDetail from "@/pages/RouteDetail";
 import Booking from "@/pages/Booking";
+import Confirmation from "@/pages/Confirmation";
 import Marketplace from "@/pages/Marketplace";
 import FeedbackPage from "@/pages/FeedbackPage";
 import NotFound from "@/pages/NotFound";
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/route" element={<RoutePage />} />
           <Route path="/route/:id" element={<RouteDetail />} />
           <Route path="/booking" element={<Booking />} />
+          <Route path="/confirmation" element={<Confirmation />} />
           <Route path="/marketplace" element={<Marketplace />} />
           <Route path="/feedback" element={<FeedbackPage />} />
           <Route path="*" element={<NotFound />} />
