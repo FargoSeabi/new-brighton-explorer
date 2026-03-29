@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
-import { MapPin } from "lucide-react";
+import routeArtsCentre from "@/assets/route-arts-centre.jpg";
+import routeMemorial from "@/assets/route-memorial.jpg";
+import routeChurch from "@/assets/route-church.jpg";
 
 export const locations = [
-  { id: 1, name: "Mendi Arts Centre", desc: "A vibrant hub for local and international art exhibitions." },
-  { id: 2, name: "Mendi Memorial", desc: "A solemn tribute to the community's historical legacy." },
-  { id: 3, name: "St Stephen's Church", desc: "A beautiful Victorian-era church with stunning architecture." },
+  { id: 1, name: "Mendi Arts Centre", desc: "A vibrant hub for local and international art exhibitions.", image: routeArtsCentre },
+  { id: 2, name: "Mendi Memorial", desc: "A solemn tribute to the community's historical legacy.", image: routeMemorial },
+  { id: 3, name: "St Stephen's Church", desc: "A beautiful Victorian-era church with stunning architecture.", image: routeChurch },
 ];
 
 export default function RoutePage() {
@@ -15,16 +17,21 @@ export default function RoutePage() {
       <div className="grid md:grid-cols-3 gap-6">
         {locations.map((loc) => (
           <Link key={loc.id} to={`/route/${loc.id}`}>
-            <div className="bg-card rounded-xl p-6 border border-border shadow-sm hover:shadow-md hover:border-primary/30 transition-all group">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <MapPin className="text-primary" size={20} />
-                </div>
-                <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
+            <div className="bg-card rounded-xl border border-border shadow-sm hover:shadow-md hover:border-primary/30 transition-all group overflow-hidden">
+              <img
+                src={loc.image}
+                alt={loc.name}
+                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+                width={800}
+                height={600}
+              />
+              <div className="p-5">
+                <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors mb-1">
                   {loc.name}
                 </h3>
+                <p className="text-sm text-muted-foreground">{loc.desc}</p>
               </div>
-              <p className="text-sm text-muted-foreground">{loc.desc}</p>
             </div>
           </Link>
         ))}
