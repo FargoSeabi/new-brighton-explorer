@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hero-cultural.jpg";
 
 export default function Home() {
   return (
@@ -8,7 +8,7 @@ export default function Home() {
       <section className="relative h-[75vh] flex items-center justify-center overflow-hidden">
         <img
           src={heroBg}
-          alt="New Brighton coastal town aerial view"
+          alt="Cultural festival with traditional dancers in vibrant costumes"
           className="absolute inset-0 w-full h-full object-cover"
           width={1920}
           height={1080}
