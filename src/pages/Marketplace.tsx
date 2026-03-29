@@ -4,36 +4,39 @@ import marketBunnyChow from "@/assets/market-bunny-chow.jpg";
 import marketVetkoek from "@/assets/market-vetkoek.jpg";
 import marketArt from "@/assets/market-art.jpg";
 import marketBobotie from "@/assets/market-bobotie.jpg";
+import { Button } from "@/components/ui/button";
 
 const items = [
-  { name: "Traditional Crafts", desc: "Handwoven beadwork, baskets, and handmade souvenirs.", image: marketCrafts, category: "Crafts" },
-  { name: "Jollof Rice", desc: "Spiced rice with grilled chicken and fried plantain.", image: marketJollof, category: "Food" },
-  { name: "Bunny Chow", desc: "Hollowed bread loaf filled with rich, spiced curry.", image: marketBunnyChow, category: "Food" },
-  { name: "Vetkoek", desc: "Golden fried dough filled with seasoned mince meat.", image: marketVetkoek, category: "Food" },
-  { name: "Bobotie", desc: "Traditional spiced minced meat with egg custard topping.", image: marketBobotie, category: "Food" },
-  { name: "Local Art", desc: "Bold African contemporary paintings, portraits, and prints.", image: marketArt, category: "Art" },
+  { name: "Beaded Necklace", price: "$15", image: marketCrafts },
+  { name: "Handwoven Basket", price: "$25", image: marketJollof },
+  { name: "Chakalaka", price: "$10", image: marketBunnyChow },
+  { name: "Handwoven Basket", price: "$25", image: marketVetkoek },
+  { name: "Chakalaka", price: "$10", image: marketBobotie },
+  { name: "Wooden Carving", price: "$30", image: marketArt },
 ];
 
 export default function Marketplace() {
   return (
     <div className="container mx-auto py-12 px-4">
-      <h2 className="text-3xl font-bold text-foreground mb-2">Marketplace</h2>
-      <p className="text-muted-foreground mb-8">Browse local goods, cultural food, and art from the community.</p>
+      <h2 className="text-3xl font-display italic font-bold text-foreground mb-8 text-center">
+        Local Marketplace
+      </h2>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {items.map((item) => (
-          <div key={item.name} className="bg-card rounded-xl border border-border shadow-sm hover:shadow-md transition-shadow overflow-hidden group">
+        {items.map((item, i) => (
+          <div key={i} className="bg-card rounded-xl border border-border overflow-hidden">
             <img
               src={item.image}
               alt={item.name}
-              className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+              className="w-full h-44 object-cover"
               loading="lazy"
               width={800}
               height={600}
             />
-            <div className="p-5">
-              <span className="text-xs font-medium text-primary uppercase tracking-wider">{item.category}</span>
-              <h3 className="text-lg font-semibold text-foreground mt-1 mb-1">{item.name}</h3>
-              <p className="text-sm text-muted-foreground">{item.desc}</p>
+            <div className="p-4">
+              <p className="text-sm font-medium text-foreground">{item.name} - {item.price}</p>
+              <Button variant="hero" size="sm" className="mt-2 text-xs px-3 py-1 h-7">
+                Like
+              </Button>
             </div>
           </div>
         ))}
