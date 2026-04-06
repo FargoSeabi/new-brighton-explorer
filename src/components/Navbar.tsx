@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ShoppingCart } from "lucide-react";
 import { useState } from "react";
+<<<<<<< HEAD
 import BookingDialog from "./BookingDialog";
+=======
+import { useCart } from "@/context/CartContext";
+import BookingModal from "./BookingModal";
+>>>>>>> 0799e539438fa2996ca89c0f6af3879bed572d0e
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -13,13 +18,17 @@ const navLinks = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+<<<<<<< HEAD
   const [bookingOpen, setBookingOpen] = useState(false);
+=======
+  const { cartItems } = useCart();
+>>>>>>> 0799e539438fa2996ca89c0f6af3879bed572d0e
 
   return (
     <nav className="sticky top-0 z-50 bg-card/95 backdrop-blur-md border-b border-border shadow-sm">
       <div className="container mx-auto flex justify-between items-center py-3 px-4">
         <Link to="/" className="text-xl font-bold text-foreground tracking-tight">
-          New Brighton
+          Explore New Brighton
         </Link>
 
         <div className="hidden md:flex items-center gap-6">
@@ -35,7 +44,23 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-2">
+<<<<<<< HEAD
           <Button variant="hero" size="sm" onClick={() => setBookingOpen(true)}>Book Now</Button>
+=======
+          <Link to="/cart" className="relative">
+            <Button variant="ghost" size="sm" className="gap-2">
+              <ShoppingCart size={18} />
+              {cartItems.length > 0 && (
+                <span className="absolute top-0 right-0 bg-primary text-primary-foreground text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+                  {cartItems.length}
+                </span>
+              )}
+            </Button>
+          </Link>
+          <BookingModal>
+            <Button variant="hero" size="sm">Book Now</Button>
+          </BookingModal>
+>>>>>>> 0799e539438fa2996ca89c0f6af3879bed572d0e
           <button
             className="md:hidden text-foreground"
             onClick={() => setOpen(!open)}
@@ -57,6 +82,9 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+          <Link to="/cart" onClick={() => setOpen(false)} className="block py-2 text-sm font-medium text-muted-foreground hover:text-foreground">
+            Cart
+          </Link>
         </div>
       )}
       
