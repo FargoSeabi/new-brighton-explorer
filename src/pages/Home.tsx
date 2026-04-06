@@ -1,12 +1,8 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
 import BookingDialog from "@/components/BookingDialog";
-=======
-import BookingModal from "@/components/BookingModal";
->>>>>>> 0799e539438fa2996ca89c0f6af3879bed572d0e
-import heroBg from "@/assets/hero-cultural.jpg";
+import heroBg from "@/assets/market 1.jpeg";
 
 export default function Home() {
   const [bookingOpen, setBookingOpen] = useState(false);
@@ -15,7 +11,7 @@ export default function Home() {
       <section className="relative h-[75vh] flex items-center justify-center overflow-hidden">
         <img
           src={heroBg}
-          alt="Cultural festival with traditional dancers in vibrant costumes"
+          alt="Food market and cultural cuisine background"
           className="absolute inset-0 w-full h-full object-cover"
           width={1920}
           height={1080}
@@ -32,13 +28,9 @@ export default function Home() {
             <Link to="/route">
               <Button variant="hero" size="lg">Explore Route</Button>
             </Link>
-<<<<<<< HEAD
-            <Button variant="hero" size="lg" onClick={() => setBookingOpen(true)}>Book a Tour</Button>
-=======
-            <BookingModal>
-              <Button variant="hero" size="lg">Book a Tour</Button>
-            </BookingModal>
->>>>>>> 0799e539438fa2996ca89c0f6af3879bed572d0e
+            <Button variant="hero" size="lg" onClick={() => setBookingOpen(true)}>
+              Book a Tour
+            </Button>
           </div>
         </div>
       </section>
