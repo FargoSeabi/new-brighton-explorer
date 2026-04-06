@@ -26,9 +26,7 @@ export default function Home() {
               <Button variant="hero" size="lg">Explore Route</Button>
             </Link>
             <Link to="/booking">
-              <Button variant="outline" size="lg" className="border-primary-foreground/50 text-primary-foreground hover:bg-primary-foreground/10 rounded-xl">
-                Book a Tour
-              </Button>
+              <Button variant="hero" size="lg">Book a Tour</Button>
             </Link>
           </div>
         </div>

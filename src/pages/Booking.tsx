@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Clock, Calendar, User, CheckCircle } from "lucide-react";
 
 const tours = [
-  { label: "3hr Tour", value: "3hr", price: "£25" },
-  { label: "6hr Tour", value: "6hr", price: "£45" },
-  { label: "Full Day", value: "Full Day", price: "£70" },
+  { label: "3hr Tour", value: "3hr", price: "R350" },
+  { label: "6hr Tour", value: "6hr", price: "R630" },
+  { label: "Full Day", value: "Full Day", price: "R980" },
 ];
 
 export default function Booking() {

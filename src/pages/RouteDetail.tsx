@@ -33,6 +33,11 @@ export default function RouteDetail() {
           This is a significant cultural and historical site in New Brighton. Visitors can explore
           the rich heritage and learn about the community's story through guided tours and exhibits.
         </p>
+        <div className="mt-6">
+          <Link to="/booking">
+            <Button className="w-full">Book Now</Button>
+          </Link>
+        </div>
       </div>
     </div>
   );
