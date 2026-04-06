@@ -20,7 +20,8 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 bg-card/95 backdrop-blur-md border-b border-border shadow-sm">
       <div className="container mx-auto flex justify-between items-center py-3 px-4">
         <Link to="/" className="text-xl font-bold text-foreground tracking-tight">
-          Explore New Brighton
+          Explore 
+          New Brighton
         </Link>
 
         <div className="hidden md:flex items-center gap-6">
