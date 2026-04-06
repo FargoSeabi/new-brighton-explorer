@@ -23,7 +23,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-foreground/50" />
         <div className="relative z-10 text-center px-4">
           <h1 className="text-4xl md:text-6xl font-bold text-primary-foreground mb-4 drop-shadow-lg">
-            Experience New Brighton
+            Food based township tour
           </h1>
           <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-xl mx-auto">
             Discover the cultural heritage, historic landmarks, and vibrant community of this coastal gem.
