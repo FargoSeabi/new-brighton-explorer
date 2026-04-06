@@ -2,17 +2,18 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import BookingDialog from "./BookingDialog";
 
 const navLinks = [
   { to: "/", label: "Home" },
   { to: "/route", label: "Route" },
-  { to: "/booking", label: "Booking" },
   { to: "/marketplace", label: "Marketplace" },
   { to: "/feedback", label: "Feedback" },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [bookingOpen, setBookingOpen] = useState(false);
 
   return (
     <nav className="sticky top-0 z-50 bg-card/95 backdrop-blur-md border-b border-border shadow-sm">
@@ -34,9 +35,7 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-2">
-          <Link to="/booking">
-            <Button variant="hero" size="sm">Book Now</Button>
-          </Link>
+          <Button variant="hero" size="sm" onClick={() => setBookingOpen(true)}>Book Now</Button>
           <button
             className="md:hidden text-foreground"
             onClick={() => setOpen(!open)}
@@ -60,6 +59,8 @@ export default function Navbar() {
           ))}
         </div>
       )}
+      
+      <BookingDialog open={bookingOpen} onOpenChange={setBookingOpen} />
     </nav>
   );
 }
