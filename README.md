@@ -1,3 +1,3 @@
-# Welcome to your Lovable project
+# Welcome to New Brighton Tourist APP
 
-TODO: Document your project here
+
