@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { locations } from "./RoutePage";
+import { locations } from "@/data/locations";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, MapPin } from "lucide-react";
 

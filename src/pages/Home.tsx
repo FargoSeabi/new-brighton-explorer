@@ -1,9 +1,15 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
+import BookingDialog from "@/components/BookingDialog";
+=======
 import BookingModal from "@/components/BookingModal";
+>>>>>>> 0799e539438fa2996ca89c0f6af3879bed572d0e
 import heroBg from "@/assets/hero-cultural.jpg";
 
 export default function Home() {
+  const [bookingOpen, setBookingOpen] = useState(false);
   return (
     <div>
       <section className="relative h-[75vh] flex items-center justify-center overflow-hidden">
@@ -26,12 +32,19 @@ export default function Home() {
             <Link to="/route">
               <Button variant="hero" size="lg">Explore Route</Button>
             </Link>
+<<<<<<< HEAD
+            <Button variant="hero" size="lg" onClick={() => setBookingOpen(true)}>Book a Tour</Button>
+=======
             <BookingModal>
               <Button variant="hero" size="lg">Book a Tour</Button>
             </BookingModal>
+>>>>>>> 0799e539438fa2996ca89c0f6af3879bed572d0e
           </div>
         </div>
       </section>
+
+      {/* Booking Dialog */}
+      <BookingDialog open={bookingOpen} onOpenChange={setBookingOpen} />
 
       <section className="container mx-auto py-16 px-4">
         <h2 className="text-2xl font-bold text-foreground mb-8 text-center">Why Visit New Brighton?</h2>

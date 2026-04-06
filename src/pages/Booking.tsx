@@ -61,6 +61,7 @@ export default function Booking() {
           <h2 className="text-2xl font-bold text-foreground mb-6">Select Date</h2>
           <input
             type="date"
+            title="Select tour date"
             onChange={(e) => setData({ ...data, date: e.target.value })}
             className="w-full p-3 border border-input rounded-xl bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
           />
