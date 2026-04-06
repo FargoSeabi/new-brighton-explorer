@@ -1,7 +1,4 @@
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
-import { locations } from "@/data/locations";
-=======
 import routeArtsCentre from "@/assets/route-arts-centre.jpg";
 import routeMemorial from "@/assets/route-memorial.jpg";
 import stStephens from "@/assets/st stephens.jpg";
@@ -19,7 +16,6 @@ export const locations = [
   { id: 6, name: "Kama Primary School", desc: "An educational landmark serving the local community for generations.", image: kamaSchool },
   { id: 7, name: "Vuyisile Heritage Museum", desc: "Preserving and showcasing the stories of our ancestors and community.", image: vuyisile },
 ];
->>>>>>> 0799e539438fa2996ca89c0f6af3879bed572d0e
 
 export default function RoutePage() {
   return (

@@ -2,12 +2,8 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ShoppingCart } from "lucide-react";
 import { useState } from "react";
-<<<<<<< HEAD
-import BookingDialog from "./BookingDialog";
-=======
 import { useCart } from "@/context/CartContext";
 import BookingModal from "./BookingModal";
->>>>>>> 0799e539438fa2996ca89c0f6af3879bed572d0e
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -18,11 +14,7 @@ const navLinks = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-<<<<<<< HEAD
-  const [bookingOpen, setBookingOpen] = useState(false);
-=======
   const { cartItems } = useCart();
->>>>>>> 0799e539438fa2996ca89c0f6af3879bed572d0e
 
   return (
     <nav className="sticky top-0 z-50 bg-card/95 backdrop-blur-md border-b border-border shadow-sm">
@@ -45,9 +37,6 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-2">
-<<<<<<< HEAD
-          <Button variant="hero" size="sm" onClick={() => setBookingOpen(true)}>Book Now</Button>
-=======
           <Link to="/cart" className="relative">
             <Button variant="ghost" size="sm" className="gap-2">
               <ShoppingCart size={18} />
@@ -61,7 +50,6 @@ export default function Navbar() {
           <BookingModal>
             <Button variant="hero" size="sm">Book Now</Button>
           </BookingModal>
->>>>>>> 0799e539438fa2996ca89c0f6af3879bed572d0e
           <button
             className="md:hidden text-foreground"
             onClick={() => setOpen(!open)}
@@ -88,8 +76,6 @@ export default function Navbar() {
           </Link>
         </div>
       )}
-      
-      <BookingDialog open={bookingOpen} onOpenChange={setBookingOpen} />
     </nav>
   );
 }
