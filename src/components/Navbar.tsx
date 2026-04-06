@@ -1,18 +1,20 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ShoppingCart } from "lucide-react";
 import { useState } from "react";
+import { useCart } from "@/context/CartContext";
+import BookingModal from "./BookingModal";
 
 const navLinks = [
   { to: "/", label: "Home" },
   { to: "/route", label: "Route" },
-  { to: "/booking", label: "Booking" },
   { to: "/marketplace", label: "Marketplace" },
   { to: "/feedback", label: "Feedback" },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const { cartItems } = useCart();
 
   return (
     <nav className="sticky top-0 z-50 bg-card/95 backdrop-blur-md border-b border-border shadow-sm">
@@ -34,9 +36,19 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-2">
-          <Link to="/booking">
-            <Button variant="hero" size="sm">Book Now</Button>
+          <Link to="/cart" className="relative">
+            <Button variant="ghost" size="sm" className="gap-2">
+              <ShoppingCart size={18} />
+              {cartItems.length > 0 && (
+                <span className="absolute top-0 right-0 bg-primary text-primary-foreground text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+                  {cartItems.length}
+                </span>
+              )}
+            </Button>
           </Link>
+          <BookingModal>
+            <Button variant="hero" size="sm">Book Now</Button>
+          </BookingModal>
           <button
             className="md:hidden text-foreground"
             onClick={() => setOpen(!open)}
@@ -58,6 +70,9 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+          <Link to="/cart" onClick={() => setOpen(false)} className="block py-2 text-sm font-medium text-muted-foreground hover:text-foreground">
+            Cart
+          </Link>
         </div>
       )}
     </nav>

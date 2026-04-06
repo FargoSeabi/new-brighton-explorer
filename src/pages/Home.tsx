@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import BookingModal from "@/components/BookingModal";
 import heroBg from "@/assets/hero-cultural.jpg";
 
 export default function Home() {
@@ -25,9 +26,9 @@ export default function Home() {
             <Link to="/route">
               <Button variant="hero" size="lg">Explore Route</Button>
             </Link>
-            <Link to="/booking">
+            <BookingModal>
               <Button variant="hero" size="lg">Book a Tour</Button>
-            </Link>
+            </BookingModal>
           </div>
         </div>
       </section>
