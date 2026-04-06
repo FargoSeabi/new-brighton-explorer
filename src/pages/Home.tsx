@@ -17,10 +17,10 @@ export default function Home() {
         <div className="absolute inset-0 bg-foreground/50" />
         <div className="relative z-10 text-center px-4">
           <h1 className="text-4xl md:text-6xl font-bold text-primary-foreground mb-4 drop-shadow-lg">
-            Food based township tour
+            Food Based Township Tour
           </h1>
           <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-xl mx-auto">
-            Discover the cultural heritage, historic landmarks, and vibrant community of this coastal gem.
+            Discover the cultural heritage, historic landmarks, and vibrant community of this historic township.
           </p>
           <div className="flex gap-4 justify-center">
             <Link to="/route">
@@ -40,7 +40,7 @@ export default function Home() {
         <div className="grid md:grid-cols-3 gap-6">
           {[
             { title: "Rich History", desc: "Centuries of cultural heritage waiting to be explored." },
-            { title: "Coastal Beauty", desc: "Stunning seaside views and golden sandy beaches." },
+            { title: "Delicious Food", desc: "Savor the unique flavors and traditional township cuisine." },
             { title: "Local Culture", desc: "Vibrant arts, crafts, and culinary experiences." },
           ].map((item) => (
             <div key={item.title} className="bg-card rounded-xl p-6 shadow-sm border border-border hover:shadow-md transition-shadow">
