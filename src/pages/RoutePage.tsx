@@ -8,11 +8,11 @@ import kamaSchool from "@/assets/Kama-Primary-School.jpg";
 import vuyisile from "@/assets/vuyisile.jpg";
 
 export const locations = [
-  { id: 1, name: "Mendi Arts Centre", desc: "A vibrant hub for local and international art exhibitions.", image: routeArtsCentre },
-  { id: 2, name: "Mendi Memorial", desc: "A solemn tribute to the community's historical legacy.", image: routeMemorial },
-  { id: 3, name: "St Stephen's Historic Site", desc: "An important cultural landmark with rich historical significance.", image: stStephens },
-  { id: 4, name: "George Pemba Gallery", desc: "Dedicated to the works and legacy of the renowned South African artist.", image: georgePemba },
-  { id: 5, name: "Emlotheni Cultural Centre", desc: "A space celebrating traditional crafts and cultural heritage.", image: emoltheni },
+  { id: 1, name: "Mendi Arts Centre", desc: "The Mendi Arts Centre serves as the starting point of the tourism route. It is a cultural and community space that introduces visitors to New Brighton’s history, identity, and purpose of the experience. This stop is used for welcoming visitors, orientation, and setting expectations for a slow, immersive cultural journey.", image: routeArtsCentre },
+  { id: 2, name: "Mendi Memorial", desc: "This site reflects the legacy of the SS Mendi tragedy, where Black South African soldiers lost their lives during World War I. It is an important symbol of sacrifice, identity, and recognition of historically marginalised contributions", image: routeMemorial },
+  { id: 3, name: "St Stephen's Historic Site", desc: "St Stephen's Anglican Church         Description: St Stephen’s Anglican Church is a spiritual and cultural landmark within New Brighton. It represents the role of religion in community life, unity, and resilience, especially during times of struggle", image: stStephens },
+  { id: 4, name: "George Pemba Gallery", desc: "This stop focuses on present-day community life and social issues, particularly mental health awareness. It allows visitors to understand that New Brighton is not only about history, but also about current realities, challenges, and resilience.", image: georgePemba },
+  { id: 5, name: "Emlotheni Cultural Centre", desc: "The Emlotheni Memorial Site is a heritage and remembrance space where freedom fighters are buried. It connects visitors to the struggle against apartheid and highlights the sacrifices made by individuals such as Vuyisile Mini.", image: emoltheni },
   { id: 6, name: "Kama Primary School", desc: "An educational landmark serving the local community for generations.", image: kamaSchool },
   { id: 7, name: "Vuyisile Heritage Museum", desc: "Preserving and showcasing the stories of our ancestors and community.", image: vuyisile },
 ];
